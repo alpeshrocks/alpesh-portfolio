@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alpesh Shinde — Serene Portfolio</title>
+  <meta name="description" content="Alpesh Shinde — USC MSCS (Data Science). Calm, nature-inspired portfolio featuring ML, data engineering, and analytics projects.">
+  <meta property="og:title" content="Alpesh Shinde — Serene Portfolio">
+  <meta property="og:description" content="Calm, nature-inspired portfolio with ML, DE, and analytics work.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/leaf.svg">
+  <link rel="preload" href="styles/main.css" as="style">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="icon" href="assets/leaf.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alpesh Shinde",
+    "url": "https://yourusername.github.io/",
+    "affiliation": {"@type":"CollegeOrUniversity","name":"University of Southern California"},
+    "alumniOf": "Visvesvaraya Technological University",
+    "jobTitle": "Data Science / ML Engineer Intern",
+    "worksFor": "USC Information Technology Services",
+    "email": "mailto:alpeshsh@usc.edu"
+  }
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top">
+      <img src="assets/leaf.svg" alt="" width="24" height="24">
+      <span>Alpesh Shinde</span>
+    </a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="top" aria-label="Intro">
+    <div class="hero-inner">
+      <h1>Calm thinking.<br><span class="accent">Impactful data.</span></h1>
+      <p class="tag">USC MSCS (Data Science, GPA 3.90) · 2+ yrs building ML, data engineering & analytics systems.</p>
+      <div class="cta">
+        <a class="btn" href="#work">See Work</a>
+        <a class="btn ghost" href="#resume">View Resume</a>
+      </div>
+    </div>
+    <div class="wave" aria-hidden="true">
+      <img src="assets/wave.svg" alt="">
+    </div>
+  </section>
+
+  <main id="work" class="work">
+    <h2>Selected Work</h2>
+    <div class="grid">
+      <!-- VIBE / Shure Dashboard -->
+      <article class="card">
+        <div class="thumb"></div>
+        <div class="body">
+          <h3>VIBE — Classroom AV Health</h3>
+          <p>Full-stack MERN + WebSockets to monitor 2,000+ AV devices; predictive failure models cut downtime by ~30%.</p>
+          <ul class="chips">
+            <li>MongoDB</li><li>Express</li><li>React</li><li>Node</li><li>LSTM</li>
+          </ul>
+          <div class="links">
+            <a href="#" aria-disabled="true" class="link disabled">Live</a>
+            <a href="#" aria-disabled="true" class="link">Repo (private)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- OwlVision -->
+      <article class="card">
+        <div class="thumb ocean"></div>
+        <div class="body">
+          <h3>OwlVision — Taxiway Graphs</h3>
+          <p>Optimized aviation taxiway graphs; 95% redundant path pruning; Gemini Vision for visual checks.</p>
+          <ul class="chips">
+            <li>Python</li><li>NetworkX</li><li>Graph ML</li><li>Vertex AI</li>
+          </ul>
+          <div class="links">
+            <a href="#" aria-disabled="true" class="link disabled">Case Study</a>
+            <a href="#" aria-disabled="true" class="link disabled">Repo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Internship Job Tracker AI -->
+      <article class="card">
+        <div class="thumb forest"></div>
+        <div class="body">
+          <h3>Internship Job Tracker AI</h3>
+          <p>Multi-source scraping + RAG dashboard; hourly refresh, dedup, and apply-tracking with alerts.</p>
+          <ul class="chips">
+            <li>Airflow</li><li>dbt</li><li>FastAPI</li><li>LLM</li>
+          </ul>
+          <div class="links">
+            <a href="#" aria-disabled="true" class="link disabled">Live</a>
+            <a href="#" aria-disabled="true" class="link disabled">Repo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Go Agent -->
+      <article class="card">
+        <div class="thumb mountain"></div>
+        <div class="body">
+          <h3>Go Tournament Agent</h3>
+          <p>Self-play RL agent with curriculum; evaluation harness and tournament bracket visualizer.</p>
+          <ul class="chips">
+            <li>PyTorch</li><li>RL</li><li>MCTS</li>
+          </ul>
+          <div class="links">
+            <a href="#" aria-disabled="true" class="link disabled">Demo</a>
+            <a href="#" aria-disabled="true" class="link disabled">Repo</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <section id="about" class="about">
+    <h2>About</h2>
+    <p>I’m Alpesh (Anish) — a data practitioner who likes calm, legible systems. I work across ML, analytics, and data engineering: recommendation systems, predictive modeling, experiment design, and production data pipelines.</p>
+    <ul class="facts">
+      <li>USC MSCS · Data Science</li>
+      <li>5× Azure Certified</li>
+      <li>IEEE publications in ML/CV</li>
+      <li>Los Angeles, CA</li>
+    </ul>
+  </section>
+
+  <section id="resume" class="resume">
+    <h2>Resume</h2>
+    <p>Select a version:</p>
+    <div class="resume-buttons">
+      <a class="btn small" href="assets/resume/Alpesh_Shinde_Resume_DataScience.pdf" target="_blank" rel="noopener">Data Science</a>
+      <a class="btn small" href="assets/resume/Alpesh_Shinde_Resume_DataEngineering.pdf" target="_blank" rel="noopener">Data Engineering</a>
+    </div>
+    <p class="note">Replace the placeholder PDFs in <code>assets/resume/</code> with your actual resumes.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <form id="contactForm" aria-label="Contact form">
+      <label>
+        <span>Name</span>
+        <input name="name" type="text" required>
+      </label>
+      <label>
+        <span>Email</span>
+        <input name="email" type="email" required>
+      </label>
+      <label>
+        <span>Message</span>
+        <textarea name="message" rows="4" required></textarea>
+      </label>
+      <button class="btn" type="submit">Send</button>
+      <p id="formMsg" class="form-msg" role="status" aria-live="polite"></p>
+    </form>
+    <div class="social">
+      <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+      <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+      <a href="mailto:alpeshsh@usc.edu" aria-label="Email">Email</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <small>© <span id="year"></span> Alpesh Shinde · Built with care in LA</small>
+  </footer>
+
+  <script src="scripts/main.js" defer></script>
+</body>
+</html>
