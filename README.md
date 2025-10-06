@@ -1,31 +1,16 @@
-# Alpesh Shinde — Serene Nature Portfolio
+# Alpesh Shinde — Static Portfolio (v2)
+A serene, nature-inspired, personality-rich static portfolio ready for GitHub Pages.
 
-A calm, nature‑inspired portfolio site (static HTML/CSS/JS) designed for GitHub Pages.
+## Features
+- Hero with startup + getting-things-done statement
+- About section with degrees
+- Experience & Projects (USC ITS, BlueOptima, Servify, SprigHub, Grocery Startup, Code RAG, Automations)
+- Travel & Food section (6 countries + Yosemite + LA food hunts)
+- Placeholder for personal images
+- Resume buttons for Data Science & Data Engineering
+- Responsive, mobile-friendly layout
 
-## 🚀 Quick Deploy (GitHub Pages)
-
-1. Create a new GitHub repo (e.g. `alpesh-portfolio`).
-2. Upload the contents of this folder to the repo root.
-3. In GitHub: **Settings → Pages → Build and deployment**
-   - **Source**: Deploy from branch
-   - **Branch**: `main` (root) → Save
-4. Your site will appear at `https://<your-username>.github.io/alpesh-portfolio/`
-
-> Tip: To use a custom domain, set it under **Settings → Pages** and create a `CNAME` file with your domain.
-
-## ✏️ Personalize
-
-- **Name, tagline, socials**: edit `index.html` (search for “Alpesh”).
-- **Projects**: in `index.html`, update the four sample cards with real links.
-- **Resumes**: replace the placeholder PDFs in `assets/resume/` with your real resumes,
-  keeping the same filenames or updating the hrefs.
-
-## 🧪 Local Preview
-
-Just open `index.html` in a browser. No build step needed.
-
-## 🪴 Design Notes
-
-- Serene palette, generous whitespace, subtle shadows.
-- Lightweight (no frameworks), accessible markup, responsive.
-- SEO + OpenGraph + JSON‑LD ready.
+## Deploy
+1. Push contents to a GitHub repo (e.g. `alpesh-portfolio-v2`)
+2. Enable GitHub Pages under Settings → Pages → Branch `main` root
+3. Access site at https://username.github.io/alpesh-portfolio-v2/
