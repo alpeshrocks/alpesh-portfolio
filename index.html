@@ -1,172 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alpesh Shinde — Portfolio</title>
-  <meta name="description" content="Calm systems, startup grit, and a getting-things-done mentality.">
-  <link rel="stylesheet" href="styles/main.css">
-  <script defer src="scripts/main.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1b1b" />
+  <title>Alpesh • Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-<header class="nav blur">
-  <a class="brand" href="#top">🌿 Alpesh Shinde</a>
-  <button class="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
-  <nav class="menu">
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#achievements">Achievements</a>
-    <a href="#projects">Projects</a>
-    <a href="#personal">Personal</a>
-    <a href="#resume">Resume</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <!-- Accessibility skip link -->
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<section class="hero" id="top" aria-label="Intro">
-  <div class="hero-bg" aria-hidden="true">
-    <div class="layer sky"></div>
-    <div class="layer clouds"></div>
-    <div class="layer mountains"></div>
-    <div class="layer leaves"></div>
-    <div class="orbs" aria-hidden="true">
-      <span></span><span></span><span></span>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#">AS</a>
+      <nav class="nav">
+        <a href="#about" data-nav>About</a>
+        <a href="#achievements" data-nav>Achievements</a>
+        <a href="#projects" data-nav>Projects</a>
+        <a href="#contact" data-nav>Contact</a>
+        <button id="themeToggle" aria-label="Toggle theme">☾</button>
+      </nav>
     </div>
-  </div>
-  <div class="hero-inner reveal">
-    <h1 class="headline">
-      Calm mindset. Startup grit.<br>
-      <span class="accent">A getting‑things‑done mentality.</span>
-    </h1>
-    <p class="tag">I build serene, human‑centered data systems — from a community grocery startup to ML & analytics at USC.</p>
-    <div class="cta">
-      <a class="btn glow" href="#projects">Explore My Work</a>
-      <a class="btn ghost glow" href="#resume">View Resume</a>
-    </div>
-    <div class="ticker" aria-hidden="true">
-      <span>Think Calm 🌿</span><span>Build Fast 🚀</span><span>Get Things Done ⚡</span>
-    </div>
-  </div>
-  <svg class="divider" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M0,64L48,74.7C96,85,192,107,288,117.3C384,128,480,128,576,112C672,96,768,64,864,69.3C960,75,1056,117,1152,133.3C1248,149,1344,139,1392,133.3L1440,128L1440,0L0,0Z" />
-  </svg>
-</section>
+  </header>
 
-<main>
-  <section id="about" class="section">
-    <h2 class="section-title">About</h2>
-    <p class="lead">Hi, I’m Alpesh (Anish) — a USC MSCS student (Data Science, GPA 3.90) who blends calm product thinking with a getting‑things‑done mentality. I enjoy turning messy data into clear, reliable systems.</p>
-    <ul class="badges">
-      <li>🎓 M.S. Computer Science (Data Science) — USC, 2025–2026</li>
-      <li>🎓 B.E. Computer Science — VTU, 2018–2022</li>
-      <li>📍 Los Angeles, CA</li>
-    </ul>
-    <blockquote class="statement">“I treat every project like a startup experiment — launch fast, learn faster, scale what works.”</blockquote>
-  </section>
-
-  <section id="experience" class="section alt">
-    <h2 class="section-title">Experience</h2>
-    <div class="timeline" role="list">
-      <article class="t-item reveal" role="listitem">
-        <div class="t-dot" aria-hidden="true"></div>
-        <h3>USC ITS — Solutions Programmer (Learning Environments)</h3>
-        <time datetime="2025-04">Apr 2025 — Present</time>
-        <p>I work in <strong>Information Technology Services</strong> for <strong>Learning Environments</strong>, building predictive dashboards and real‑time systems for 2,000+ classroom AV devices. These projects tangibly improve the daily experience of students and instructors — my fellow students and me included — by keeping learning spaces reliable and calm.</p>
-      </article>
-      <article class="t-item reveal" role="listitem">
-        <div class="t-dot" aria-hidden="true"></div>
-        <h3>Servify — Data Engineer II</h3>
-        <time datetime="2023-07">Jul 2023 — Apr 2024</time>
-        <p>Validation frameworks (Python, Airflow, dbt, Great Expectations) improving reliability across millions of events.</p>
-      </article>
-      <article class="t-item reveal" role="listitem">
-        <div class="t-dot" aria-hidden="true"></div>
-        <h3>BlueOptima — ML/Data Engineer</h3>
-        <time>2022 — 2023</time>
-        <p>Delivered ETL + ML pipelines on tight timelines to power developer intelligence & analytics.</p>
-      </article>
-      <article class="t-item reveal" role="listitem">
-        <div class="t-dot" aria-hidden="true"></div>
-        <h3>SprigHub — Data Scientist</h3>
-        <time>2022</time>
-        <p>Deployed ML models into production; improved recommendations & predictions.</p>
-      </article>
+  <!-- Mystical layered hero -->
+  <section class="hero" id="home" aria-label="Mystical Hero">
+    <div class="parallax">
+      <div class="layer sky"></div>
+      <div class="layer stars"></div>
+      <div class="layer mountains" aria-hidden="true"></div>
+      <div class="layer forest" aria-hidden="true"></div>
+      <div class="layer fog" aria-hidden="true"></div>
+      <svg class="liquid-peak" viewBox="0 0 1440 320" aria-hidden="true">
+        <path id="peakPath" d="M0,160L120,176C240,192,480,224,720,213.3C960,203,1200,149,1320,122.7L1440,96L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
+      </svg>
+    </div>
+    <div class="hero-inner">
+      <h1 class="title">
+        <span class="title-line">Calm • Focused • Bold</span>
+        <span class="title-line accent">Building systems that feel like nature.</span>
+      </h1>
+      <p class="subtitle">Data & Software Engineer — pipelines, ML, and delightful UX.</p>
+      <a class="cta" href="#projects">Explore my work</a>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="mouse"></div>
     </div>
   </section>
 
-  <section id="achievements" class="section">
-    <h2 class="section-title">Achievements & Things I'm Proud Of</h2>
-    <div class="grid">
-      <article class="card pride fancy reveal">
-        <h3>Community Grocery Startup</h3>
-        <p>I built this from scratch during lockdown — finding suppliers, handling logistics, and serving my neighborhood. We fulfilled ~2,000 orders (~$70k revenue). More importantly, we helped families access essentials affordably and reliably — a small, very real socio‑economic impact I'm deeply proud of.</p>
-      </article>
-      <article class="card glowcard reveal">
-        <h3>USC ITS — Reliability that Reaches People</h3>
-        <p>It means a lot to build systems that quietly support learning every day. When a classroom works, a student breathes easier, an instructor stays in flow, and learning happens. That’s the kind of impact that keeps me motivated.</p>
-      </article>
-      <article class="card glowcard reveal">
-        <h3>Growth & Grit</h3>
-        <p>I’m proud of how far I’ve come — stepping into the unknown, meeting people from different cultures while traveling, and learning deeply from each experience while mastering my craft. The journey shaped my character as much as my skills.</p>
-      </article>
-    </div>
-  </section>
+  <main id="main">
+    <!-- About -->
+    <section class="section about" id="about">
+      <div class="container reveal">
+        <h2>About</h2>
+        <p>
+          I design calm technology: robust data systems, ML-powered features, and interfaces
+          that move like rivers — smooth, purposeful, minimal friction.
+        </p>
+        <ul class="pill-row">
+          <li>Python</li><li>SQL</li><li>Spark</li><li>Airflow</li><li>AWS</li><li>React</li>
+          <li>LangChain</li><li>FastAPI</li>
+        </ul>
+      </div>
+    </section>
 
-  <section id="projects" class="section alt">
-    <h2 class="section-title">Projects</h2>
-    <p class="muted">Update the GitHub links with your real repos.</p>
-    <div class="grid projects">
-      <a class="card fancy reveal" href="https://github.com/your-username/vibe" target="_blank"><h3>VIBE — Classroom AV Health</h3><p>MERN + LSTM predictive models; real-time dashboards for 2,000+ devices at USC ITS.</p><span class="chip">MongoDB</span><span class="chip">React</span><span class="chip">Node</span></a>
-      <a class="card fancy reveal" href="https://github.com/your-username/community-grocery" target="_blank"><h3>Community Grocery Startup</h3><p>~2,000 orders, ~$70k revenue; end-to-end ops & product from launch to scale.</p><span class="chip">Ops</span><span class="chip">Product</span><span class="chip">Analytics</span></a>
-      <a class="card fancy reveal" href="https://github.com/your-username/code-rag" target="_blank"><h3>Code RAG</h3><p>Retrieval-augmented code search across large repos; embeddings + semantic ranking.</p><span class="chip">RAG</span><span class="chip">Embeddings</span></a>
-      <a class="card fancy reveal" href="https://github.com/your-username/internship-job-tracker-ai" target="_blank"><h3>Internship Job Tracker AI</h3><p>Automations for scraping, deduping, and alerting; dashboard to track applications.</p><span class="chip">Airflow</span><span class="chip">dbt</span><span class="chip">FastAPI</span></a>
-      <a class="card fancy reveal" href="https://github.com/your-username/blockchain-ledger" target="_blank"><h3>Blockchain Ledger</h3><p>Lightweight blockchain with block validation, P2P gossip, and a demo wallet.</p><span class="chip">Blockchain</span><span class="chip">Crypto</span></a>
-      <a class="card fancy reveal" href="https://github.com/your-username/go-tournament-agent" target="_blank"><h3>Go Tournament Agent</h3><p>Self-play RL agent with MCTS, evaluation harness, and tournament visualizer.</p><span class="chip">PyTorch</span><span class="chip">RL</span></a>
-      <a class="card fancy reveal" href="https://github.com/your-username/tsp-3d-solver" target="_blank"><h3>TSP Solver in 3D</h3><p>3D visualization + heuristics for TSP variants; interactive viewer.</p><span class="chip">Algorithms</span><span class="chip">3D</span></a>
-      <a class="card fancy reveal" href="https://github.com/your-username/la-food-buzz" target="_blank"><h3>LA Food Buzz Analyzer</h3><p>Aggregates Reddit/Yelp/Eater; trends, sentiment, and dish extraction.</p><span class="chip">NLP</span><span class="chip">ETL</span></a>
-      <a class="card fancy reveal" href="https://github.com/your-username/mcp-trading-simulator" target="_blank"><h3>MCP Trading Simulator</h3><p>Multi‑agent trading (Momentum/Mean Reversion/LLMTrader) with backtesting.</p><span class="chip">Finance</span><span class="chip">Agents</span></a>
-      <a class="card fancy reveal" href="https://github.com/your-username/knowledge-agent" target="_blank"><h3>Knowledge Management Agent</h3><p>LangGraph + FAISS to organize, search, and summarize personal knowledge.</p><span class="chip">LangGraph</span><span class="chip">FAISS</span></a>
-      <a class="card fancy reveal" href="https://github.com/your-username/virtual-receptionist" target="_blank"><h3>Virtual Receptionist</h3><p>NLP + CV for intake, routing, and smart responses; voice & vision.</p><span class="chip">NLP</span><span class="chip">CV</span></a>
-    </div>
-  </section>
+    <!-- Achievements / Things I'm proud of -->
+    <section class="section achievements" id="achievements">
+      <div class="container">
+        <h2 class="reveal">Things I'm proud of</h2>
+        <div class="grid">
+          <article class="card tilt reveal">
+            <h3>Grocery startup</h3>
+            <p>
+              Built end-to-end logistics & ordering for my community. Learned more about people,
+              trust, and iterations than any textbook could teach.
+            </p>
+          </article>
+          <article class="card tilt reveal">
+            <h3>USC ITS — impact at scale</h3>
+            <p>
+              My tools monitor 260+ classrooms. Real alerts, real reductions in downtime.
+              It's about helping students (me included) learn without disruption.
+            </p>
+          </article>
+          <article class="card tilt reveal">
+            <h3>Journey & craft</h3>
+            <p>
+              I’m proud of stepping into the unknown — traveling, meeting new people,
+              and mastering my craft one build at a time.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  <section id="personal" class="section">
-    <h2 class="section-title">Personal</h2>
-    <ul class="badges">
-      <li>✈️ Thailand · Vietnam · Singapore · Bhutan · Japan · USA</li>
-      <li>🏞️ Most recent: Yosemite (Mist Trail)</li>
-      <li>⚽ Sports: Football, racket sports</li>
-      <li>⛸️ Skating: National‑level player</li>
-      <li>🍜 LA food hunts & Asian street food</li>
-    </ul>
-    <div class="gallery reveal">
-      <img src="assets/images/personal/photo1.jpg" alt="Personal photo">
-      <img src="assets/images/personal/photo2.jpg" alt="Personal photo">
-      <img src="assets/images/personal/photo3.jpg" alt="Personal photo">
-      <img src="assets/images/personal/photo4.jpg" alt="Personal photo">
-    </div>
-  </section>
+    <!-- Projects -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <h2 class="reveal">Projects</h2>
+        <div class="grid">
+          <a class="project-card reveal tilt" href="#" aria-label="Code Atlas RAG">
+            <h3>code-atlas-rag</h3>
+            <p>Semantic code search with embeddings + RAG. Faster reuse, faster debugging.</p>
+            <span class="tech">Python • FastAPI • FAISS • LangChain</span>
+          </a>
+          <a class="project-card reveal tilt" href="#" aria-label="Internship Tracker">
+            <h3>internship-orbit</h3>
+            <p>Job-source orchestration with scraping, DB, and dashboards; apply with focus.</p>
+            <span class="tech">Python • Airflow • MongoDB • React</span>
+          </a>
+          <a class="project-card reveal tilt" href="#" aria-label="LA Food Trends">
+            <h3>la-food-scenes</h3>
+            <p>NLP + trend tracking across Reddit / Yelp / Maps, menu-level insights.</p>
+            <span class="tech">Spark • dbt • GCP • Vertex AI</span>
+          </a>
+          <a class="project-card reveal tilt" href="#" aria-label="Blockchain Registry">
+            <h3>terra-ledger</h3>
+            <p>Blockchain-based land registry with KYC and tax logic.</p>
+            <span class="tech">Solidity • Hardhat • React</span>
+          </a>
+        </div>
+      </div>
+    </section>
 
-  <section id="resume" class="section alt">
-    <h2 class="section-title">Resume</h2>
-    <div class="resume-switcher reveal">
-      <a class="btn glow" href="assets/resume/Alpesh_Shinde_Resume_DataScience.pdf" target="_blank">Data Science</a>
-      <a class="btn ghost glow" href="assets/resume/Alpesh_Shinde_Resume_DataEngineering.pdf" target="_blank">Data Engineering</a>
-    </div>
-  </section>
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="container reveal">
+        <h2>Contact</h2>
+        <p>Open to Summer 2026 internships.</p>
+        <div class="contact-cards">
+          <a class="card tilt" href="mailto:alpeshsh@usc.edu">Email</a>
+          <a class="card tilt" href="https://www.linkedin.com/in/alpeshshinde/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="card tilt" href="https://github.com/alpeshrocks" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <section id="contact" class="section">
-    <h2 class="section-title">Contact</h2>
-    <p class="lead">Let’s build something that works — or swap LA food & travel tips.</p>
-    <div class="contact-actions reveal">
-      <a class="btn glow" href="mailto:alpeshsh@usc.edu">Email</a>
-      <a class="btn ghost glow" href="https://linkedin.com" target="_blank">LinkedIn</a>
-      <a class="btn ghost glow" href="https://github.com" target="_blank">GitHub</a>
-    </div>
-  </section>
-</main>
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Alpesh Shinde • Built with calm, nature, and craft.</p>
+  </footer>
 
-<footer class="footer"><small>© <span id="year"></span> Alpesh Shinde · Calm systems · Startup grit · Getting things done.</small></footer>
-<div class="cursor" aria-hidden="true"></div>
+  <canvas id="leafTrail" aria-hidden="true"></canvas>
+  <script defer src="assets/js/main.js"></script>
 </body>
 </html>
