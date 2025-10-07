@@ -1,16 +1,16 @@
-# Alpesh Shinde — Static Portfolio (v2)
-A serene, nature-inspired, personality-rich static portfolio ready for GitHub Pages.
+# alpesh-portfolio
 
-## Features
-- Hero with startup + getting-things-done statement
-- About section with degrees
-- Experience & Projects (USC ITS, BlueOptima, Servify, SprigHub, Grocery Startup, Code RAG, Automations)
-- Travel & Food section (6 countries + Yosemite + LA food hunts)
-- Placeholder for personal images
-- Resume buttons for Data Science & Data Engineering
-- Responsive, mobile-friendly layout
+A serene, nature‑inspired static portfolio with impressive CSS transitions and your full project list.
+
+## Projects
+Update the GitHub links in `#projects` to your real repos (search for `your-username` and replace).
 
 ## Deploy
-1. Push contents to a GitHub repo (e.g. `alpesh-portfolio-v2`)
-2. Enable GitHub Pages under Settings → Pages → Branch `main` root
-3. Access site at https://username.github.io/alpesh-portfolio-v2/
+1. Create a repo named `alpesh-portfolio`.
+2. Push these files to the repo root.
+3. GitHub → **Settings → Pages** → Source: Deploy from branch; Branch: `main` (root).
+4. Visit `https://<your-username>.github.io/alpesh-portfolio/`.
+
+## Personalize
+- Replace PDFs in `assets/resume/` with your resumes.
+- Drop your travel/food images in `assets/images/personal/` and adjust filenames if needed.
