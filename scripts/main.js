@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Reveal on scroll
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {

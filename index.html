@@ -16,13 +16,14 @@
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
+    <a href="#achievements">Achievements</a>
     <a href="#travel">Travel & Food</a>
     <a href="#resume">Resume</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<section class="hero" id="top">
+<section class="hero" id="top" aria-label="Intro">
   <div class="hero-bg" aria-hidden="true">
     <div class="layer sky"></div>
     <div class="layer clouds"></div>
@@ -30,7 +31,10 @@
     <div class="layer leaves"></div>
   </div>
   <div class="hero-inner reveal">
-    <h1>Calm mindset. Startup grit.<br><span class="accent">A getting‑things‑done mentality.</span></h1>
+    <h1 class="headline">
+      Calm mindset. Startup grit.<br>
+      <span class="accent">A getting‑things‑done mentality.</span>
+    </h1>
     <p class="tag">I build serene, human‑centered data systems — from a community grocery startup to ML & analytics at USC.</p>
     <div class="cta">
       <a class="btn" href="#projects">Explore My Work</a>
@@ -59,11 +63,31 @@
 
   <section id="experience" class="section alt">
     <h2 class="section-title">Experience</h2>
-    <div class="grid">
-      <article class="card tilt reveal"><h3>USC ITS — Solutions Programmer</h3><p>MERN + WebSockets dashboards and predictive models for 2,000+ classroom AV devices; ~30% downtime reduction.</p></article>
-      <article class="card tilt reveal"><h3>BlueOptima — ML/Data Engineer</h3><p>Delivered ETL + ML pipelines on tight timelines to power developer intelligence & analytics.</p></article>
-      <article class="card tilt reveal"><h3>Servify — Data Engineer II</h3><p>Validation frameworks (Python, Airflow, dbt, Great Expectations) improving reliability across millions of events.</p></article>
-      <article class="card tilt reveal"><h3>SprigHub — Data Scientist</h3><p>Deployed ML models into production; improved recommendations & predictions.</p></article>
+    <div class="timeline" role="list">
+      <article class="t-item reveal" role="listitem">
+        <div class="t-dot" aria-hidden="true"></div>
+        <h3>USC ITS — Solutions Programmer</h3>
+        <time datetime="2025-04">Apr 2025 — Present</time>
+        <p>MERN + WebSockets dashboards and predictive models for 2,000+ classroom AV devices; ~30% downtime reduction.</p>
+      </article>
+      <article class="t-item reveal" role="listitem">
+        <div class="t-dot" aria-hidden="true"></div>
+        <h3>Servify — Data Engineer II</h3>
+        <time datetime="2023-07">Jul 2023 — Apr 2024</time>
+        <p>Validation frameworks (Python, Airflow, dbt, Great Expectations) improving reliability across millions of events.</p>
+      </article>
+      <article class="t-item reveal" role="listitem">
+        <div class="t-dot" aria-hidden="true"></div>
+        <h3>BlueOptima — ML/Data Engineer</h3>
+        <time>2022 — 2023</time>
+        <p>Delivered ETL + ML pipelines on tight timelines to power developer intelligence & analytics.</p>
+      </article>
+      <article class="t-item reveal" role="listitem">
+        <div class="t-dot" aria-hidden="true"></div>
+        <h3>SprigHub — Data Scientist</h3>
+        <time>2022</time>
+        <p>Deployed ML models into production; improved recommendations & predictions.</p>
+      </article>
     </div>
   </section>
 
@@ -84,7 +108,25 @@
     </div>
   </section>
 
-  <section id="travel" class="section alt">
+  <section id="achievements" class="section alt">
+    <h2 class="section-title">Achievements & Things I'm Proud Of</h2>
+    <div class="grid">
+      <article class="card pride fancy reveal">
+        <h3>Community Grocery Startup</h3>
+        <p>I built this from scratch during lockdown — identifying a local need, sourcing inventory, handling logistics, and serving my community. We fulfilled ~2,000 orders and generated ~$70k revenue. More importantly, it helped families access essentials affordably and reliably — a small, real socio‑economic impact I'm deeply proud of.</p>
+      </article>
+      <article class="card reveal">
+        <h3>USC ITS — Predictive Reliability</h3>
+        <p>Designed predictive models and dashboards that reduced classroom AV downtime by ~30%, making learning spaces calmer and more dependable.</p>
+      </article>
+      <article class="card reveal">
+        <h3>Code RAG — Find Signal in Code</h3>
+        <p>Built a retrieval‑augmented code search to help engineers quickly discover relevant snippets and patterns in large repos.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="travel" class="section">
     <h2 class="section-title">Travel & Food</h2>
     <ul class="badges">
       <li>✈️ Thailand · Vietnam · Singapore · Bhutan · Japan · USA</li>
@@ -99,7 +141,7 @@
     </div>
   </section>
 
-  <section id="resume" class="section">
+  <section id="resume" class="section alt">
     <h2 class="section-title">Resume</h2>
     <div class="resume-switcher reveal">
       <a class="btn" href="assets/resume/Alpesh_Shinde_Resume_DataScience.pdf" target="_blank">Data Science</a>
@@ -107,7 +149,7 @@
     </div>
   </section>
 
-  <section id="contact" class="section alt">
+  <section id="contact" class="section">
     <h2 class="section-title">Contact</h2>
     <p class="lead">Let’s build something that works — or swap LA food & travel tips.</p>
     <div class="contact-actions reveal">
