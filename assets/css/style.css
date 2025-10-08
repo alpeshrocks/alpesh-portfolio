@@ -1,80 +1,108 @@
-// Year
-document.getElementById('year').textContent = new Date().getFullYear();
-
-// Theme toggle with persistence
-const saved = localStorage.getItem('theme');
-if (saved === 'light') document.documentElement.classList.add('light');
-const toggle = document.getElementById('themeToggle');
-function updateToggleIcon(){
-  toggle.textContent = document.documentElement.classList.contains('light') ? '☀' : '☾';
+/* Serene theme with working light/dark toggle */
+:root{
+  --bg:#0a1617; --fg:#eaf4f4; --muted:#a9c6c6;
+  --accent:#90e0ef; --leaf:#2ecc71; --card:#0f2224;
+  --glass:rgba(255,255,255,0.06); --shadow:0 20px 60px rgba(0,0,0,0.35);
+  --radius:18px; --speed:900ms;
 }
-updateToggleIcon();
-toggle.addEventListener('click', () => {
-  document.documentElement.classList.toggle('light');
-  localStorage.setItem('theme', document.documentElement.classList.contains('light') ? 'light' : 'dark');
-  updateToggleIcon();
-});
+.light{
+  --bg:#f6fbfb; --fg:#0c1e1e; --muted:#4d6869;
+  --accent:#0ea5a8; --leaf:#2ecc71; --card:#ffffff;
+  --glass:rgba(0,0,0,0.04); --shadow:0 8px 24px rgba(0,0,0,0.12);
+}
+*{box-sizing:border-box} html,body{height:100%}
+body{
+  margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:var(--fg);
+  background: radial-gradient(1200px 800px at 20% 10%, #0d2a2b 0%, var(--bg) 60%) fixed;
+  overflow-x:hidden; accent-color: var(--accent);
+}
+h1,h2,h3{font-family:Marcellus,Georgia,serif; letter-spacing:.3px}
+a{color:inherit; text-decoration:none}
 
-// Smooth scroll
-document.querySelectorAll('[data-nav]').forEach(a => {
-  a.addEventListener('click', e => {
-    e.preventDefault();
-    const el = document.querySelector(a.getAttribute('href'));
-    if (!el) return;
-    const top = el.getBoundingClientRect().top + window.scrollY - 70;
-    window.scrollTo({ top, behavior: 'smooth' });
-  });
-});
+/* Header */
+.site-header{ position:fixed; inset:0 0 auto 0; z-index:20; backdrop-filter: blur(8px);
+  background: linear-gradient(to bottom, rgba(0,0,0,.35), transparent); }
+.nav-wrap{ max-width:1100px; margin:auto; display:flex; align-items:center; justify-content:space-between; padding:16px; }
+.brand{
+  display:inline-grid; place-items:center; width:42px; height:42px; border-radius:999px;
+  background: linear-gradient(145deg, var(--accent), #58c9d1);
+  color:#001111; font-weight:800; box-shadow: 0 6px 18px rgba(86,220,220,.35);
+}
+.nav a{ margin:0 10px; opacity:.9; position:relative; }
+.nav a::after{
+  content:""; position:absolute; inset:auto 0 -6px 0; height:2px; transform: scaleX(0);
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  transition: transform .4s;
+}
+.nav a:hover::after{ transform: scaleX(1); }
+#themeToggle{
+  margin-left:14px; font-size:16px; padding:.3rem .6rem; border-radius:10px; border:1px solid transparent;
+  background: var(--glass); color:var(--fg); cursor:pointer; transition: background .3s, transform .2s;
+}
+#themeToggle:hover{ background: rgba(255,255,255,.12); transform: translateY(-1px); }
 
-// Reveal on scroll
-const io = new IntersectionObserver((entries)=>{
-  entries.forEach(entry => { if (entry.isIntersecting){ entry.target.classList.add('in'); io.unobserve(entry.target);} });
-},{ threshold:.2 });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+/* Hero */
+.hero{ position:relative; min-height: 100svh; display:grid; place-items:center; overflow:hidden; }
+.hero-inner{ text-align:center; padding:0 16px; max-width:920px; }
+.title{ font-size: clamp(2rem, 1rem + 3.8vw, 4.2rem); display:grid; gap:.4rem; }
+.title-line.accent{ color: var(--accent); text-shadow: 0 6px 22px rgba(144,224,239,.45); }
+.subtitle{ margin:.6rem 0 1.1rem; color:var(--muted); }
+.cta{
+  display:inline-block; padding:.8rem 1.2rem; border-radius:999px;
+  background: linear-gradient(135deg, var(--accent), #79d4e4);
+  color:#001213; font-weight:700; letter-spacing:.3px; box-shadow: 0 12px 30px rgba(0,186,200,.35);
+}
 
-// 3D tilt hover
-document.querySelectorAll('.project-card, .card').forEach(card => {
-  card.addEventListener('pointermove', (e) => {
-    const r = card.getBoundingClientRect();
-    const x = e.clientX - r.left, y = e.clientY - r.top;
-    const rx = ((y / r.height) - 0.5) * -6;
-    const ry = ((x / r.width) - 0.5) * 6;
-    card.style.transform = `perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg)`;
-  });
-  card.addEventListener('pointerleave', () => {
-    card.style.transform = `perspective(800px) rotateX(0) rotateY(0)`;
-  });
-});
+/* Sections */
+.section{ padding: clamp(64px, 8vh, 120px) 0; position:relative; }
+.container{ width:min(1100px, 92%); margin:0 auto; }
 
-// ==== Inject Projects from your original (edit array as needed) ====
-// Replace titles/links with your real ones; this keeps what we detected + safe defaults
-const projects = [
-  { title: "code-atlas-rag", desc: "Semantic code search & explanations with embeddings + RAG.", href: "#" },
-  { title: "internship-orbit", desc: "Job-source orchestration, tracking, and dashboards.", href: "#" },
-  { title: "la-food-scenes", desc: "NLP trends across Reddit/Yelp/Maps for LA dining.", href: "#" },
-  { title: "terra-ledger", desc: "Blockchain-based land registry with KYC & tax logic.", href: "#" },
-  // add more from your original zip here…
-];
+/* Reveal on scroll */
+.reveal{ opacity:0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+.reveal.in{ opacity:1; transform: translateY(0); }
 
-const grid = document.getElementById('projectGrid');
-grid.innerHTML = projects.map(p => `
-  <a class="project-card reveal" ${p.href ? `href="${p.href}" target="_blank" rel="noopener"` : ''}>
-    <h3>${p.title}</h3>
-    <p>${p.desc || ''}</p>
-  </a>
-`).join('');
+/* Grid & cards */
+.grid{ display:grid; grid-template-columns: repeat( auto-fit, minmax(260px, 1fr) ); gap:18px; }
+.card, .project-card{
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  transform-style: preserve-3d;
+  outline: 1px solid transparent;
+  transition: transform .25s ease, outline .2s;
+}
+.card:hover, .project-card:hover{ outline-color: rgba(144,224,239,.25); }
 
-// ==== Experience (horizontal desktop / vertical mobile) ====
-const experience = [
-  { title: "USC ITS — Solutions Programmer / Student Engineer", dates: "Jan 2025 — Present" },
-  { title: "Community Grocery Startup — Founder/Engineer", dates: "2020 — 2022" },
-  { title: "Sprighub — Software Engineer (Intern/Contract)", dates: "2022 — 2023" },
-  // add anything else from your original resume here…
-];
-const exp = document.getElementById('expItems');
-exp.innerHTML = experience.map(e => `
-  <div class="item reveal">
-    <div class="dates">${e.dates}</div>
-    <h3>${e.title}</h3>
-  </div>
-`).join('');
+/* Travel gallery */
+.travel-grid{ display:grid; grid-template-columns: repeat( auto-fit, minmax(220px, 1fr) ); gap:12px; }
+.travel-grid img{ width:100%; height:220px; object-fit:cover; border-radius:14px; box-shadow: var(--shadow); transition: transform .3s; }
+.travel-grid img:hover{ transform: translateY(-4px); }
+
+/* Experience timeline */
+.timeline{ position:relative; }
+.timeline .items{ display:flex; gap:18px; overflow-x:auto; padding:10px 2px; scrollbar-width:thin; }
+.timeline .item{
+  min-width: 280px; background:var(--card); border:1px solid rgba(255,255,255,.08);
+  border-radius:14px; padding:14px; position:relative;
+}
+.timeline .item .dates{ color:var(--muted); font-size:.9rem; margin-bottom:6px; }
+
+/* Vertical on small screens */
+@media (max-width: 800px){
+  .timeline .items{ flex-direction:column; }
+  .timeline .item{ min-width: auto; }
+}
+/* Horizontal connector line on desktop */
+@media (min-width: 801px){
+  .timeline .items{ position:relative; align-items:stretch; }
+  .timeline .items::before{
+    content:""; position:absolute; left:0; right:0; top:50%; height:2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  }
+  .timeline .item{ display:flex; flex-direction:column; justify-content:center; }
+}
+
+/* Footer */
+.site-footer{ text-align:center; padding:28px 0 60px; color: var(--muted); }
