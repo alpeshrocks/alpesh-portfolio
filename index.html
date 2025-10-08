@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0b1b1b" />
+  <meta name="theme-color" content="#0a1617" />
   <title>Alpesh • Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,132 +11,87 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <!-- Accessibility skip link -->
-  <a class="skip-link" href="#main">Skip to content</a>
-
   <header class="site-header">
     <div class="nav-wrap">
       <a class="brand" href="#">AS</a>
       <nav class="nav">
         <a href="#about" data-nav>About</a>
-        <a href="#achievements" data-nav>Achievements</a>
         <a href="#projects" data-nav>Projects</a>
+        <a href="#travel" data-nav>Travel</a>
+        <a href="#experience" data-nav>Experience</a>
         <a href="#contact" data-nav>Contact</a>
         <button id="themeToggle" aria-label="Toggle theme">☾</button>
       </nav>
     </div>
   </header>
 
-  <!-- Mystical layered hero -->
-  <section class="hero" id="home" aria-label="Mystical Hero">
-    <div class="parallax">
-      <div class="layer sky"></div>
-      <div class="layer stars"></div>
-      <div class="layer mountains" aria-hidden="true"></div>
-      <div class="layer forest" aria-hidden="true"></div>
-      <div class="layer fog" aria-hidden="true"></div>
-      <svg class="liquid-peak" viewBox="0 0 1440 320" aria-hidden="true">
-        <path id="peakPath" d="M0,160L120,176C240,192,480,224,720,213.3C960,203,1200,149,1320,122.7L1440,96L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
-      </svg>
-    </div>
+  <!-- HERO -->
+  <section class="hero" id="home" aria-label="Hero">
     <div class="hero-inner">
       <h1 class="title">
-        <span class="title-line">Calm • Focused • Bold</span>
-        <span class="title-line accent">Building systems that feel like nature.</span>
+        <span class="title-line accent"><!-- original tagline here -->Building systems that feel like nature.</span>
       </h1>
-      <p class="subtitle">Data & Software Engineer — pipelines, ML, and delightful UX.</p>
+      <p class="subtitle">Serene, nature-first design • Robust data & ML systems • Fast, accessible UX</p>
       <a class="cta" href="#projects">Explore my work</a>
-    </div>
-    <div class="scroll-indicator" aria-hidden="true">
-      <span>Scroll</span>
-      <div class="mouse"></div>
     </div>
   </section>
 
   <main id="main">
-    <!-- About -->
+    <!-- ABOUT -->
     <section class="section about" id="about">
       <div class="container reveal">
         <h2>About</h2>
-        <p>
-          I design calm technology: robust data systems, ML-powered features, and interfaces
-          that move like rivers — smooth, purposeful, minimal friction.
-        </p>
-        <ul class="pill-row">
-          <li>Python</li><li>SQL</li><li>Spark</li><li>Airflow</li><li>AWS</li><li>React</li>
-          <li>LangChain</li><li>FastAPI</li>
-        </ul>
+        <p>I build calm, resilient software — data pipelines, ML features, and interfaces that feel effortless.</p>
       </div>
     </section>
 
-    <!-- Achievements / Things I'm proud of -->
-    <section class="section achievements" id="achievements">
-      <div class="container">
-        <h2 class="reveal">Things I'm proud of</h2>
-        <div class="grid">
-          <article class="card tilt reveal">
-            <h3>Grocery startup</h3>
-            <p>
-              Built end-to-end logistics & ordering for my community. Learned more about people,
-              trust, and iterations than any textbook could teach.
-            </p>
-          </article>
-          <article class="card tilt reveal">
-            <h3>USC ITS — impact at scale</h3>
-            <p>
-              My tools monitor 260+ classrooms. Real alerts, real reductions in downtime.
-              It's about helping students (me included) learn without disruption.
-            </p>
-          </article>
-          <article class="card tilt reveal">
-            <h3>Journey & craft</h3>
-            <p>
-              I’m proud of stepping into the unknown — traveling, meeting new people,
-              and mastering my craft one build at a time.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
+    <!-- PROJECTS -->
     <section class="section projects" id="projects">
       <div class="container">
         <h2 class="reveal">Projects</h2>
-        <div class="grid">
-          <a class="project-card reveal tilt" href="#" aria-label="Code Atlas RAG">
-            <h3>code-atlas-rag</h3>
-            <p>Semantic code search with embeddings + RAG. Faster reuse, faster debugging.</p>
-            <span class="tech">Python • FastAPI • FAISS • LangChain</span>
-          </a>
-          <a class="project-card reveal tilt" href="#" aria-label="Internship Tracker">
-            <h3>internship-orbit</h3>
-            <p>Job-source orchestration with scraping, DB, and dashboards; apply with focus.</p>
-            <span class="tech">Python • Airflow • MongoDB • React</span>
-          </a>
-          <a class="project-card reveal tilt" href="#" aria-label="LA Food Trends">
-            <h3>la-food-scenes</h3>
-            <p>NLP + trend tracking across Reddit / Yelp / Maps, menu-level insights.</p>
-            <span class="tech">Spark • dbt • GCP • Vertex AI</span>
-          </a>
-          <a class="project-card reveal tilt" href="#" aria-label="Blockchain Registry">
-            <h3>terra-ledger</h3>
-            <p>Blockchain-based land registry with KYC and tax logic.</p>
-            <span class="tech">Solidity • Hardhat • React</span>
-          </a>
+        <div class="grid" id="projectGrid" class="reveal"></div>
+      </div>
+    </section>
+
+    <!-- TRAVEL -->
+    <section class="section" id="travel">
+      <div class="container">
+        <h2 class="reveal">Moments & Memories</h2>
+        <p class="reveal">A few frames from the road (dummy placeholders for now).</p>
+        <div class="travel-grid">
+          <img src="assets/img/travel/p1.svg" alt="Travel photo 1" />
+          <img src="assets/img/travel/p2.svg" alt="Travel photo 2" />
+          <img src="assets/img/travel/p3.svg" alt="Travel photo 3" />
+          <img src="assets/img/travel/p4.svg" alt="Travel photo 4" />
+          <img src="assets/img/travel/p5.svg" alt="Travel photo 5" />
+          <img src="assets/img/travel/p6.svg" alt="Travel photo 6" />
+          <img src="assets/img/travel/p7.svg" alt="Travel photo 7" />
+          <img src="assets/img/travel/p8.svg" alt="Travel photo 8" />
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
+    <!-- EXPERIENCE TIMELINE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <h2 class="reveal">Experience</h2>
+        <div class="timeline">
+          <div class="items" id="expItems">
+            <!-- injected by JS for easy editing -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
     <section class="section contact" id="contact">
       <div class="container reveal">
         <h2>Contact</h2>
         <p>Open to Summer 2026 internships.</p>
-        <div class="contact-cards">
-          <a class="card tilt" href="mailto:alpeshsh@usc.edu">Email</a>
-          <a class="card tilt" href="https://www.linkedin.com/in/alpeshshinde/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="card tilt" href="https://github.com/alpeshrocks" target="_blank" rel="noopener">GitHub</a>
+        <div class="grid">
+          <a class="card" href="mailto:alpeshsh@usc.edu">Email</a>
+          <a class="card" href="https://www.linkedin.com/in/alpeshshinde/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="card" href="https://github.com/alpeshrocks" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
     </section>
@@ -145,8 +100,6 @@
   <footer class="site-footer">
     <p>© <span id="year"></span> Alpesh Shinde • Built with calm, nature, and craft.</p>
   </footer>
-
-  <canvas id="leafTrail" aria-hidden="true"></canvas>
   <script defer src="assets/js/main.js"></script>
 </body>
 </html>
