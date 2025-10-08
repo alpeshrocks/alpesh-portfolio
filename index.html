@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0a1617" />
+  <meta name="theme-color" content="#0a1220" id="metaTheme" />
   <title>Alpesh • Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,14 +11,16 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+  <canvas id="stars" aria-hidden="true"></canvas>
+
   <header class="site-header">
     <div class="nav-wrap">
-      <a class="brand" href="#">AS</a>
+      <a class="brand glow" href="#">AS</a>
       <nav class="nav">
-        <a href="#about" data-nav>About</a>
-        <a href="#projects" data-nav>Projects</a>
-        <a href="#travel" data-nav>Travel</a>
         <a href="#experience" data-nav>Experience</a>
+        <a href="#projects" data-nav>Projects</a>
+        <a href="#achievements" data-nav>Achievements</a>
+        <a href="#travel" data-nav>Travel</a>
         <a href="#contact" data-nav>Contact</a>
         <button id="themeToggle" aria-label="Toggle theme">☾</button>
       </nav>
@@ -27,22 +29,42 @@
 
   <!-- HERO -->
   <section class="hero" id="home" aria-label="Hero">
+    <div class="aurora"></div>
     <div class="hero-inner">
-      <h1 class="title">
-        <span class="title-line accent">Calm mindset. Startup grit.
+      <h1 class="title gradient">
+        <span class="title-line">Calm mindset. Startup grit.
       A getting‑things‑done mentality.</span>
       </h1>
-      <p class="subtitle">Serene, nature-first design • Robust data & ML systems • Fast, accessible UX</p>
-      <a class="cta" href="#projects">Explore my work</a>
+      <p class="subtitle">Calm, character, and craft — software that feels like nature.</p>
+      <a class="cta pulse" href="#experience">Start with impact</a>
     </div>
+    <div class="scroll-indicator" aria-hidden="true"><span>Scroll</span><div class="mouse"></div></div>
   </section>
 
   <main id="main">
-    <!-- ABOUT -->
-    <section class="section about" id="about">
-      <div class="container reveal">
-        <h2>About</h2>
-        <p>I build calm, resilient software — data pipelines, ML features, and interfaces that feel effortless.</p>
+    <!-- EXPERIENCE (moved just below intro) -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <h2 class="reveal">Experience</h2>
+        <div class="timeline">
+          <div class="items">
+            <div class="item reveal r3d">
+  <div class="dot"></div>
+  <div class="dates">Jan 2025 — Present</div>
+  <h3>USC ITS — Solutions Programmer / Student Engineer</h3>
+</div>
+<div class="item reveal r3d">
+  <div class="dot"></div>
+  <div class="dates">2020 — 2022</div>
+  <h3>Community Grocery Startup — Founder/Engineer</h3>
+</div>
+<div class="item reveal r3d">
+  <div class="dot"></div>
+  <div class="dates">2022 — 2023</div>
+  <h3>Sprighub — Software Engineer (Intern/Contract)</h3>
+</div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -50,55 +72,107 @@
     <section class="section projects" id="projects">
       <div class="container">
         <h2 class="reveal">Projects</h2>
-        <div class="grid" id="projectGrid">
-          <a class="project-card reveal" href="https://github.com/your-username/vibe" target="_blank" rel="noopener">
+        <div class="grid">
+          <a class="project-card r3d reveal" href="https://github.com/your-username/vibe" target="_blank" rel="noopener">
   <h3>VIBE — Classroom AV HealthMERN + LSTM predictive models; real-time dashboards for 2,000+ devices at USC ITS.MongoDBReactNode</h3>
   <p></p>
 </a>
-<a class="project-card reveal" href="https://github.com/your-username/community-grocery" target="_blank" rel="noopener">
+<a class="project-card r3d reveal" href="https://github.com/your-username/community-grocery" target="_blank" rel="noopener">
   <h3>Community Grocery Startup~2,000 orders, ~$70k revenue; end-to-end ops &amp; product from launch to scale.OpsProductAnalytics</h3>
   <p></p>
 </a>
-<a class="project-card reveal" href="https://github.com/your-username/code-rag" target="_blank" rel="noopener">
+<a class="project-card r3d reveal" href="https://github.com/your-username/code-rag" target="_blank" rel="noopener">
   <h3>Code RAGRetrieval-augmented code search across large repos; embeddings + semantic ranking.RAGEmbeddings</h3>
   <p></p>
 </a>
-<a class="project-card reveal" href="https://github.com/your-username/internship-job-tracker-ai" target="_blank" rel="noopener">
+<a class="project-card r3d reveal" href="https://github.com/your-username/internship-job-tracker-ai" target="_blank" rel="noopener">
   <h3>Internship Job Tracker AIAutomations for scraping, deduping, and alerting; dashboard to track applications.AirflowdbtFastAPI</h3>
   <p></p>
 </a>
-<a class="project-card reveal" href="https://github.com/your-username/blockchain-ledger" target="_blank" rel="noopener">
+<a class="project-card r3d reveal" href="https://github.com/your-username/blockchain-ledger" target="_blank" rel="noopener">
   <h3>Blockchain LedgerLightweight blockchain with block validation, P2P gossip, and a demo wallet.BlockchainCrypto</h3>
   <p></p>
 </a>
-<a class="project-card reveal" href="https://github.com/your-username/go-tournament-agent" target="_blank" rel="noopener">
+<a class="project-card r3d reveal" href="https://github.com/your-username/go-tournament-agent" target="_blank" rel="noopener">
   <h3>Go Tournament AgentSelf-play RL agent with MCTS, evaluation harness, and tournament visualizer.PyTorchRL</h3>
   <p></p>
 </a>
-<a class="project-card reveal" href="https://github.com/your-username/tsp-3d-solver" target="_blank" rel="noopener">
+<a class="project-card r3d reveal" href="https://github.com/your-username/tsp-3d-solver" target="_blank" rel="noopener">
   <h3>TSP Solver in 3D3D visualization + heuristics for TSP variants; interactive viewer.Algorithms3D</h3>
   <p></p>
 </a>
-<a class="project-card reveal" href="https://github.com/your-username/la-food-buzz" target="_blank" rel="noopener">
+<a class="project-card r3d reveal" href="https://github.com/your-username/la-food-buzz" target="_blank" rel="noopener">
   <h3>LA Food Buzz AnalyzerAggregates Reddit/Yelp/Eater; trends, sentiment, and dish extraction.NLPETL</h3>
   <p></p>
 </a>
-<a class="project-card reveal" href="https://github.com/your-username/mcp-trading-simulator" target="_blank" rel="noopener">
+<a class="project-card r3d reveal" href="https://github.com/your-username/mcp-trading-simulator" target="_blank" rel="noopener">
   <h3>MCP Trading SimulatorMulti‑agent trading (Momentum/Mean Reversion/LLMTrader) with backtesting.FinanceAgents</h3>
   <p></p>
 </a>
-<a class="project-card reveal" href="https://github.com/your-username/knowledge-agent" target="_blank" rel="noopener">
+<a class="project-card r3d reveal" href="https://github.com/your-username/knowledge-agent" target="_blank" rel="noopener">
   <h3>Knowledge Management AgentLangGraph + FAISS to organize, search, and summarize personal knowledge.LangGraphFAISS</h3>
   <p></p>
 </a>
-<a class="project-card reveal" href="https://github.com/your-username/virtual-receptionist" target="_blank" rel="noopener">
+<a class="project-card r3d reveal" href="https://github.com/your-username/virtual-receptionist" target="_blank" rel="noopener">
   <h3>Virtual ReceptionistNLP + CV for intake, routing, and smart responses; voice &amp; vision.NLPCV</h3>
   <p></p>
 </a>
-<a class="project-card reveal"  target="_blank" rel="noopener">
+<a class="project-card r3d reveal"  target="_blank" rel="noopener">
   <h3>VIBE — Classroom AV Health</h3>
   <p></p>
 </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS / PERSONAL CHARACTER -->
+    <section class="section achievements" id="achievements">
+      <div class="container">
+        <h2 class="reveal">Things I'm proud of</h2>
+        <p class="lead reveal">The work is technical. The reason is human.</p>
+        <div class="ach-grid">
+          <article class="ach-card reveal r3d">
+  <img src="assets/img/achievements/a1.svg" alt="Community Grocery Startup" />
+  <div class="ach-meta">
+    <h3>Community Grocery Startup</h3>
+    <p>I built this from scratch during lockdown — finding suppliers, handling logistics, and serving my neighborhood. We fulfilled ~2,000 orders (~$70k revenue). More importantly, we helped families access essentials affordably and reliably — a small, very real socio‑economic impact I&#x27;m deeply proud of.</p>
+  </div>
+</article>
+<article class="ach-card reveal r3d">
+  <img src="assets/img/achievements/a2.svg" alt="USC ITS — Reliability that Reaches People" />
+  <div class="ach-meta">
+    <h3>USC ITS — Reliability that Reaches People</h3>
+    <p>It means a lot to build systems that quietly support learning every day. When a classroom works, a student breathes easier, an instructor stays in flow, and learning happens. That’s the kind of impact that keeps me motivated.</p>
+  </div>
+</article>
+<article class="ach-card reveal r3d">
+  <img src="assets/img/achievements/a3.svg" alt="Growth &amp; Grit" />
+  <div class="ach-meta">
+    <h3>Growth &amp; Grit</h3>
+    <p>I’m proud of how far I’ve come — stepping into the unknown, meeting people from different cultures while traveling, and learning deeply from each experience while mastering my craft. The journey shaped my character as much as my skills.</p>
+  </div>
+</article>
+<article class="ach-card reveal r3d">
+  <img src="assets/img/achievements/a4.svg" alt="Community Grocery Startup" />
+  <div class="ach-meta">
+    <h3>Community Grocery Startup</h3>
+    <p>I built this from scratch during lockdown — finding suppliers, handling logistics, and serving my neighborhood. We fulfilled ~2,000 orders (~$70k revenue). More importantly, we helped families access essentials affordably and reliably — a small, very real socio‑economic impact I&#x27;m deeply proud of.</p>
+  </div>
+</article>
+<article class="ach-card reveal r3d">
+  <img src="assets/img/achievements/a5.svg" alt="USC ITS — Reliability that Reaches People" />
+  <div class="ach-meta">
+    <h3>USC ITS — Reliability that Reaches People</h3>
+    <p>It means a lot to build systems that quietly support learning every day. When a classroom works, a student breathes easier, an instructor stays in flow, and learning happens. That’s the kind of impact that keeps me motivated.</p>
+  </div>
+</article>
+<article class="ach-card reveal r3d">
+  <img src="assets/img/achievements/a6.svg" alt="Growth &amp; Grit" />
+  <div class="ach-meta">
+    <h3>Growth &amp; Grit</h3>
+    <p>I’m proud of how far I’ve come — stepping into the unknown, meeting people from different cultures while traveling, and learning deeply from each experience while mastering my craft. The journey shaped my character as much as my skills.</p>
+  </div>
+</article>
         </div>
       </div>
     </section>
@@ -107,7 +181,6 @@
     <section class="section" id="travel">
       <div class="container">
         <h2 class="reveal">Moments & Memories</h2>
-        <p class="reveal">A few frames from the road (dummy placeholders for now).</p>
         <div class="travel-grid">
           <img src="assets/img/travel/p1.svg" alt="Travel photo 1" />
           <img src="assets/img/travel/p2.svg" alt="Travel photo 2" />
@@ -121,38 +194,15 @@
       </div>
     </section>
 
-    <!-- EXPERIENCE TIMELINE -->
-    <section class="section" id="experience">
-      <div class="container">
-        <h2 class="reveal">Experience</h2>
-        <div class="timeline">
-          <div class="items" id="expItems">
-            <div class="item reveal">
-  <div class="dates">Jan 2025 — Present</div>
-  <h3>USC ITS — Solutions Programmer / Student Engineer</h3>
-</div>
-<div class="item reveal">
-  <div class="dates">2020 — 2022</div>
-  <h3>Community Grocery Startup — Founder/Engineer</h3>
-</div>
-<div class="item reveal">
-  <div class="dates">2022 — 2023</div>
-  <h3>Sprighub — Software Engineer (Intern/Contract)</h3>
-</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- CONTACT -->
     <section class="section contact" id="contact">
       <div class="container reveal">
         <h2>Contact</h2>
         <p>Open to Summer 2026 internships.</p>
         <div class="grid">
-          <a class="card" href="mailto:alpeshsh@usc.edu">Email</a>
-          <a class="card" href="https://www.linkedin.com/in/alpeshshinde/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="card" href="https://github.com/alpeshrocks" target="_blank" rel="noopener">GitHub</a>
+          <a class="card r3d" href="mailto:alpeshsh@usc.edu">Email</a>
+          <a class="card r3d" href="https://www.linkedin.com/in/alpeshshinde/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="card r3d" href="https://github.com/alpeshrocks" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
     </section>
